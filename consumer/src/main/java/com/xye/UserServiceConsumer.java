@@ -1,10 +1,12 @@
   
-package com.xye.service;
+package com.xye;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.xye.service.IUserService;
 
 /** 
  * ClassName:UserServiceConsumer
