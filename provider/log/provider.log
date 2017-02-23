@@ -169,3 +169,30 @@ java.net.ConnectException: Connection refused: no further information
  INFO 02-23 09:10:49(AbstractRegistryFactory.java:63):  [DUBBO] Close all registries [], dubbo version: 2.5.3, current host: 127.0.0.1
  INFO 02-23 09:10:49(AbstractProtocol.java:76):  [DUBBO] Unexport service: dubbo://192.168.41.71:28080/com.xye.service.IUserService?anyhost=true&application=dubbo-demo-provider&dubbo=2.5.3&interface=com.xye.service.IUserService&methods=login&pid=5052&side=provider&timeout=3000&timestamp=1487812249362, dubbo version: 2.5.3, current host: 127.0.0.1
  INFO 02-23 09:10:49(AbstractProtocol.java:76):  [DUBBO] Unexport service: injvm://127.0.0.1/com.xye.service.IUserService?anyhost=true&application=dubbo-demo-provider&dubbo=2.5.3&interface=com.xye.service.IUserService&methods=login&pid=5052&side=provider&timeout=3000&timestamp=1487812249362, dubbo version: 2.5.3, current host: 127.0.0.1
+ WARN 02-23 09:11:01(ClientCnxn.java:1161): Session 0x15a687ed1020000 for server localhost/127.0.0.1:2181, unexpected error, closing socket connection and attempting reconnect
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at org.apache.zookeeper.ClientCnxn$SendThread.doIO(ClientCnxn.java:858)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1130)
+ INFO 02-23 09:11:01(ZkClient.java:449): zookeeper state changed (Disconnected)
+ INFO 02-23 09:11:02(ClientCnxn.java:1041): Opening socket connection to server localhost/0:0:0:0:0:0:0:1:2181
+ WARN 02-23 09:11:03(ClientCnxn.java:1161): Session 0x15a687ed1020000 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1119)
+ INFO 02-23 09:11:05(ClientCnxn.java:1041): Opening socket connection to server localhost/127.0.0.1:2181
+ INFO 02-23 09:11:06(ClientCnxn.java:949): Socket connection established to localhost/127.0.0.1:2181, initiating session
+ INFO 02-23 09:11:06(ClientCnxn.java:738): Session establishment complete on server localhost/127.0.0.1:2181, sessionid = 0x15a687ed1020000, negotiated timeout = 30000
+ INFO 02-23 09:11:06(ZkClient.java:449): zookeeper state changed (SyncConnected)
+ INFO 02-23 09:11:29(UserServiceImpl.java:25): 用户登录：[username:hello, password:hello]
+ INFO 02-23 09:11:29(UserServiceImpl.java:27): 用户校验通过。[username:hello]
+ WARN 02-23 09:11:29(AbstractServer.java:197):  [DUBBO] All clients has discontected from /192.168.41.71:28080. You can graceful shutdown now., dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 02-23 09:11:29(DubboProtocol.java:130):  [DUBBO] disconected from /192.168.41.71:50170,url:dubbo://192.168.41.71:28080/com.xye.service.IUserService?anyhost=true&application=dubbo-demo-provider&channel.readonly.sent=true&codec=dubbo&dubbo=2.5.3&heartbeat=60000&interface=com.xye.service.IUserService&methods=login&pid=804&side=provider&timeout=3000&timestamp=1487811835996, dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 02-23 09:17:17(DubboProtocol.java:130):  [DUBBO] disconected from /0:0:0:0:0:0:0:1:50341,url:dubbo://192.168.41.71:28080/com.xye.service.IUserService?anyhost=true&application=dubbo-demo-provider&channel.readonly.sent=true&codec=dubbo&dubbo=2.5.3&heartbeat=60000&interface=com.xye.service.IUserService&methods=login&pid=804&side=provider&timeout=3000&timestamp=1487811835996, dubbo version: 2.5.3, current host: 127.0.0.1
+ WARN 02-23 09:17:17(AbstractServer.java:197):  [DUBBO] All clients has discontected from /0:0:0:0:0:0:0:1:28080. You can graceful shutdown now., dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 02-23 09:17:17(DubboProtocol.java:130):  [DUBBO] disconected from /0:0:0:0:0:0:0:1:50342,url:dubbo://192.168.41.71:28080/com.xye.service.IUserService?anyhost=true&application=dubbo-demo-provider&channel.readonly.sent=true&codec=dubbo&dubbo=2.5.3&heartbeat=60000&interface=com.xye.service.IUserService&methods=login&pid=804&side=provider&timeout=3000&timestamp=1487811835996, dubbo version: 2.5.3, current host: 127.0.0.1
