@@ -1,0 +1,36 @@
+ INFO 02-22 21:40:34(Launcher.java:32): 开始初始化core服务
+ INFO 02-22 21:40:34(AbstractApplicationContext.java:510): Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@726f3b58: startup date [Wed Feb 22 21:40:34 CST 2017]; root of context hierarchy
+ INFO 02-22 21:40:34(XmlBeanDefinitionReader.java:317): Loading XML bean definitions from class path resource [applicationContext.xml]
+ INFO 02-22 21:41:34(Launcher.java:32): 开始初始化core服务
+ INFO 02-22 21:41:34(AbstractApplicationContext.java:510): Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@726f3b58: startup date [Wed Feb 22 21:41:34 CST 2017]; root of context hierarchy
+ INFO 02-22 21:41:34(XmlBeanDefinitionReader.java:317): Loading XML bean definitions from class path resource [applicationContext.xml]
+ INFO 02-22 21:41:34(XmlBeanDefinitionReader.java:317): Loading XML bean definitions from class path resource [spring-provider.xml]
+ INFO 02-22 21:41:34(?:?): using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+ WARN 02-22 21:41:34(AbstractApplicationContext.java:487): Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.chanshuyi.service.IUserService': Cannot resolve reference to bean 'userService' while setting bean property 'ref'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'userService' is defined
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:359)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1477)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:93)
+	at com.xye.util.BeanFactoryUtil.init(BeanFactoryUtil.java:25)
+	at com.xye.boot.Launcher.main(Launcher.java:33)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'userService' is defined
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:687)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1168)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:281)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:351)
+	... 16 more
+ INFO 02-22 21:41:34(AbstractConfig.java:450):  [DUBBO] Run shutdown hook now., dubbo version: 2.5.3, current host: 127.0.0.1
+ INFO 02-22 21:41:34(AbstractRegistryFactory.java:63):  [DUBBO] Close all registries [], dubbo version: 2.5.3, current host: 127.0.0.1
